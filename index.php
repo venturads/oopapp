@@ -11,15 +11,15 @@ echo "<br>" .$cars[1]. " " .count($cars);
 <button id="btn" class="btn btn-primary" onclick="myFun()">car</button>
 
 
-
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$conn = new mysqli($server, $username, $password, $db);
 // Check connection
 if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
