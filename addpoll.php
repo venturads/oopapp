@@ -3,9 +3,6 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
-<?php
-include 'constants.php';
-?>
 <body class="text-center">
     <div id="topmenu">
         <button id="mypolls" class="btn btn-info">My Polls</button>
@@ -32,6 +29,8 @@ $result = $conn->query($sql);
 
 $pollname = $_POST['name'];
 $pollopt = $_POST['options'];
+echo $pollopt;
+echo $pollname;
 $sql = "INSERT INTO db_votes (id,name,options) VALUES (default,$pollname,$pollopt)";
 
 if ($conn->query($sql) === TRUE) {
