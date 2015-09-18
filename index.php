@@ -7,8 +7,14 @@
 include 'constants.php';
 ?>
 <body class="text-center">
-<button id="btn1" class="btn btn-primary">Add Options</button>
-<p></p>
+    <div id="topmenu">
+        <button id="mypolls" class="btn btn-info">My Polls</button>
+        <button id="newpoll" class="btn btn-success">New Poll</button>
+    </div>
+    <div id="votebox" class="text-center">
+        <button id="btn1" class="btn btn-primary">Add Options</button>
+        <p></p>
+    </div>
 <script src="js/script.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
