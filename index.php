@@ -1,7 +1,7 @@
 <?php
 include 'constants.php';
 ?>
-<body class="center">
+<body class="text-center">
 <?php
 echo 'helloworld';
 $cars = array("ford","bmw","dodge");
