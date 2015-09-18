@@ -13,11 +13,11 @@ include 'constants.php';
     </div>
     <div id="votebox" class="text-center">
         <form action="addpoll.php" method="post">
-            <input placeholder='Which is better?' id="title"></input><br><br>
-            <input placeholder='option' id="option"></input><br><br>
+            <input placeholder='Which is better?' name="name" id="title"></input><br><br>
+            <input placeholder='option' name="options" id="option"></input><br><br>
             <button id="btn1" class="btn btn-primary">Add Options</button>
             <p></p>
-            <input type="submit" class="btn btn-info">
+            <input type="submit" id="btn1" class="btn btn-info">
         </form>
     </div>
 <script src="js/script.js"></script>
