@@ -18,15 +18,13 @@ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
-//$db = substr($url["path"], 1);
+$db = substr($url["path"], 1);
 
-$conn = new mysqli($server, $username, $password);
+$conn = new mysqli($server, $username, $password, $db);
 // Check connection
 if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
 } 
-
-$result = $conn->query($sql);
 
 $pollname = $_POST['name'];
 $pollopt = $_POST['options'];
@@ -36,6 +34,13 @@ $sql = "INSERT INTO db_votes (name,options) VALUES ('$_POST[name]','$_POST[optio
 
 mysql_query($sql) or die('Error, query failed : ' . mysql_error());
 
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 
 ?>
         <p></p>
