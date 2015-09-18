@@ -36,7 +36,7 @@ $sql = "INSERT INTO db_votes (name,options) VALUES ('$_POST[name],$_POST[options
 
 mysql_query($sql) or die('Error, query failed : ' . mysql_error());
 
-$conn->close();
+
 ?>
         <p></p>
     </div>
