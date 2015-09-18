@@ -32,13 +32,9 @@ $pollname = $_POST['name'];
 $pollopt = $_POST['options'];
 echo $pollopt;
 echo $pollname;
-$sql = "INSERT INTO db_votes (id,name,options) VALUES (default,$pollname,$pollopt)";
+$sql = "INSERT INTO db_votes (name,options) VALUES ('$_POST[name],$_POST[options])";
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully. Last inserted ID is: " . $name;
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+mysql_query($sql) or die('Error, query failed : ' . mysql_error());
 
 $conn->close();
 ?>
