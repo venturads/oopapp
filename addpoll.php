@@ -12,13 +12,30 @@ include 'constants.php';
         <button id="newpoll" class="btn btn-success">New Poll</button><br><br>
     </div>
     <div id="votebox" class="text-center">
-        <form action="addpoll.php" method="post">
-            <input placeholder='Which is better?' id="title"></input><br><br>
-            <input placeholder='option' id="option"></input><br><br>
-            <button id="btn1" class="btn btn-primary">Add Options</button>
-            <p></p>
-            <input type="submit" class="btn btn-info">
-        </form>
+        <input placeholder='Which is better?' id="title"></input><br><br>
+        <input placeholder='option' id="option"></input><br><br>
+        <button id="btn1" class="btn btn-primary">Add Options</button>
+        
+        
+        
+        
+<?php
+$sql = "INSERT INTO MyGuests (id,name, options)
+VALUES (default,'$_POST[name]',' $_POST[options]')";
+
+if ($conn->query($sql) === TRUE) {
+    $last_id = $conn->insert_id;
+    echo "New record created successfully. Last inserted ID is: " . $last_id;
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+        
+        
+        
+        <p></p>
     </div>
 <script src="js/script.js"></script>
 <!-- Latest compiled and minified CSS -->
