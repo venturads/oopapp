@@ -31,7 +31,7 @@ $pollname = $_POST['name'];
 $pollopt = $_POST['options'];
 echo $pollopt;
 echo $pollname;
-$sql = "INSERT INTO db_votes (id,name,options) VALUES (default,'pollss','opt')";
+$sql = "INSERT INTO db_votes (id,name,options) VALUES (default,$pollname,$pollopt)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully. Last inserted ID is: " . $name;

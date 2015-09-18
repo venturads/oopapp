@@ -13,9 +13,9 @@ include 'constants.php';
     </div>
     <div id="votebox" class="text-center">
         <form action="addpoll.php" method="post">
-            <input placeholder='Which is better?' name="name" id="title"></input><br><br>
-            <input placeholder='option' name="options" id="option"></input><br><br>
-            <label id="label" class="label label-primary">Add Options</label>
+            <input placeholder='Which is better?' name="name"></input><br><br>
+            <input placeholder='option' name="options"></input><br><br>
+            <label id="label1" class="label label-primary">Add Options</label>
             <p></p>
             <input type="submit" id="btn1" class="btn btn-info">
         </form>
