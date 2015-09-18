@@ -6,6 +6,7 @@
 <body class="text-center">
     <div id="topmenu">
         <button id="mypolls" class="btn btn-info">My Polls</button>
+        <input type="button" onclick=# value="Go to Google" />
         <button id="newpoll" class="btn btn-success">New Poll</button><br><br>
     </div>
     <div id="votebox" class="text-center">
