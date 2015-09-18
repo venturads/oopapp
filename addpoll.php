@@ -16,25 +16,18 @@ include 'constants.php';
         <input placeholder='option' id="option"></input><br><br>
         <button id="btn1" class="btn btn-primary">Add Options</button>
         
-        
-        
-        
 <?php
 $sql = "INSERT INTO db_votes (id,name, options)
 VALUES (default,'$_POST[name]',' $_POST[options]')";
 
 if ($conn->query($sql) === TRUE) {
-    $last_id = $conn->insert_id;
-    echo "New record created successfully. Last inserted ID is: " . $last_id;
+    echo "New record created successfully. Last inserted ID is: " . $name;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
 ?>
-        
-        
-        
         <p></p>
     </div>
 <script src="js/script.js"></script>
