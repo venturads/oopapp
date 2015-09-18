@@ -17,8 +17,9 @@ include 'constants.php';
         <button id="btn1" class="btn btn-primary">Add Options</button>
         
 <?php
-$sql = "INSERT INTO db_votes (id,name, options)
-VALUES (default,'$_POST[name]',' $_POST[options]')";
+$pollname = $_POST['name'];
+$pollopt = $_POST['options'];
+$sql = "INSERT INTO db_votes (id,name,options) VALUES (default,$pollname,$pollopt)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully. Last inserted ID is: " . $name;
