@@ -2,7 +2,7 @@
 include 'constants.php';
 ?>
 <body class="text-center">
-<button id="btn1" class="btn btn-primary" onclick="myFun()">car</button>
+<button id="btn1" class="btn btn-primary">Add Options</button>
 <p></p>
 <script src="js/script.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
