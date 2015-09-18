@@ -20,7 +20,7 @@ include 'constants.php';
         
         
 <?php
-$sql = "INSERT INTO MyGuests (id,name, options)
+$sql = "INSERT INTO db_votes (id,name, options)
 VALUES (default,'$_POST[name]',' $_POST[options]')";
 
 if ($conn->query($sql) === TRUE) {
