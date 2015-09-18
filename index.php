@@ -15,7 +15,7 @@ include 'constants.php';
         <form action="addpoll.php" method="post">
             <input placeholder='Which is better?' name="name" id="title"></input><br><br>
             <input placeholder='option' name="options" id="option"></input><br><br>
-            <button id="btn1" class="btn btn-primary">Add Options</button>
+            <label id="label" class="label label-primary">Add Options</label>
             <p></p>
             <input type="submit" id="btn1" class="btn btn-info">
         </form>

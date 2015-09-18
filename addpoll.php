@@ -12,9 +12,7 @@ include 'constants.php';
         <button id="newpoll" class="btn btn-success">New Poll</button><br><br>
     </div>
     <div id="votebox" class="text-center">
-        <input placeholder='Which is better?' id="title"></input><br><br>
-        <input placeholder='option' id="option"></input><br><br>
-        <button id="btn1" class="btn btn-primary">Add Options</button>
+        
         
 <?php
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
