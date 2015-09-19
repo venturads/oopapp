@@ -18,7 +18,12 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
      // output data of each row
      while($row = $result->fetch_assoc()) {
-         echo "<br>Name: ". $row["name"] . " <button class='btn btn-success' id=" . $row["options"] . "> " . $row["options"] . "</button> " . $row["options2"] . " " . $row["options3"] . " " . $row["options4"] . "<br>";
+         echo "<br>Name: ". $row["name"] . 
+         " <button class='btn btn-success' id=" . $row["options"] . "> " . $row["options"] . "</button>
+         <button class='btn btn-success' id=" . $row["options2"] . "> " . $row["options2"] . "</button>
+         <button class='btn btn-success' id=" . $row["options3"] . "> " . $row["options3"] . "</button>
+         <button class='btn btn-success' id=" . $row["options4"] . "> " . $row["options4"] . "</button>
+         <br>";
      }
 } else {
      echo "0 results";
