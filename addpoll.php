@@ -30,7 +30,7 @@ $pollname = $_POST['name'];
 $pollopt = $_POST['options'];
 echo $pollopt;
 echo $pollname;
-$sql = "INSERT INTO db_votes (name,options) VALUES ('name','$_POST[options]')";
+$sql = "INSERT INTO db_votes (name,options) VALUES ('name','test')";
 
 mysql_query($sql) or die('Error, query failed : ' . mysql_error());
 
