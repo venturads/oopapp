@@ -30,8 +30,8 @@ function optFun(){
     }
 }
 echo count('$_POST[options]');
-$sql = "INSERT INTO db_votes (name,options)
-VALUES ('$_POST[name]', '$_POST[options]')";
+$sql = "INSERT INTO db_votes (name,options,options2,options3,options4)
+VALUES ('$_POST[name]', '$_POST[options]','$_POST[options2]','$_POST[options3]','$_POST[options4]')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
