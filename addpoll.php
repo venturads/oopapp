@@ -5,8 +5,8 @@
 </head>
 <body class="text-center">
     <div id="topmenu">
-        <button id="mypolls" class="btn btn-info">My Polls</button>
-        <button id="newpoll" onclick="index.html" class="btn btn-success">New Poll</button><br><br>
+        <a href="/index.php" id="mypolls" class="btn btn-info">My Polls</a>
+        <a href="/mypolls.php" id="newpoll" onclick="index.html" class="btn btn-success">New Poll</a><br><br>
     </div>
     <div id="votebox" class="text-center">
         
