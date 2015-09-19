@@ -9,8 +9,8 @@
 <body class="text-center">
     <div id="topmenu">
         <button id="mypolls" class="btn btn-info">My Polls</button>
-        <button id="newpoll" class="btn btn-success">New Poll</button><br><br>
-        <button id="login" class="btn btn-info" action="login.php">Login</button><br><br>
+        <a href="newpoll.php" id="newpoll" class="btn btn-success">New Poll</a><br><br>
+        <a href="login.php" id="login" class="btn btn-info">Login</a><br><br>
     </div>
     <div id="votebox" class="text-center">
         <form action="addpoll.php" method="post">
@@ -21,21 +21,6 @@
             <input type="submit" id="btn1" class="btn btn-info">
         </form>
     </div>
-    
-<script>
-function echoHello(){
- $("#login").append("<?PHP hello(); ?>");
- }
-</script>
- 
-<?PHP
-FUNCTION hello(){
- include 'login.php';
- }
- 
-?>
- 
-<button onclick="echoHello()">Say Hello</button>
 
 <script src="js/script.js"></script>
 <script src="js/pollchart.js"></script>
