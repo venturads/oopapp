@@ -13,6 +13,7 @@ include 'pollchart.php';
     <div id="topmenu">
         <button id="mypolls" class="btn btn-info">My Polls</button>
         <button id="newpoll" class="btn btn-success">New Poll</button><br><br>
+        <button id="login" class="btn btn-info">Login</button><br><br>
     </div>
     <div id="votebox" class="text-center">
         <form action="addpoll.php" method="post">
