@@ -4,9 +4,7 @@ $(document).ready(function(){
         i++;
         $("p").append(" <input name='options"+i+"' placeholder='option'></input><br><br>");
     });
-    $("#login").click(function(){
-        $("#login").append("<?php include 'login.php'; ?>");
-    });
+    
 });
 
 
