@@ -6,8 +6,7 @@
 <body class="text-center">
     <div id="topmenu">
         <button id="mypolls" class="btn btn-info">My Polls</button>
-        <input type="button" onclick="/" value="Go to Google" />
-        <button id="newpoll" class="btn btn-success">New Poll</button><br><br>
+        <button id="newpoll" onclick="index.html" class="btn btn-success">New Poll</button><br><br>
     </div>
     <div id="votebox" class="text-center">
         
@@ -27,7 +26,7 @@ if (!$conn) {
 }
 
 $sql = "INSERT INTO db_votes (name,options)
-VALUES ('John', 'Doe')";
+VALUES ('$_POST[name]', '$_POST[options]')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
