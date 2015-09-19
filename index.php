@@ -24,7 +24,7 @@
     
 <script>
 function echoHello(){
- alert("<?PHP hello(); ?>");
+ $("#login").append("<?PHP hello(); ?>");
  }
 </script>
  
