@@ -5,10 +5,7 @@
 <!-- import plugin script -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
 </head>
-<?php
-include 'constants.php';
-include 'pollchart.php';
-?>
+
 <body class="text-center">
     <div id="topmenu">
         <button id="mypolls" class="btn btn-info">My Polls</button>
@@ -33,5 +30,9 @@ include 'pollchart.php';
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<?php
+include 'constants.php';
+include 'pollchart.php';
+?>
 </body>
 </html>
