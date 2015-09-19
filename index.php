@@ -21,6 +21,22 @@
             <input type="submit" id="btn1" class="btn btn-info">
         </form>
     </div>
+    
+<script>
+function echoHello(){
+ alert("<?PHP hello(); ?>");
+ }
+</script>
+ 
+<?PHP
+FUNCTION hello(){
+ include 'login.php';
+ }
+ 
+?>
+ 
+<button onclick="echoHello()">Say Hello</button>
+
 <script src="js/script.js"></script>
 <script src="js/pollchart.js"></script>
 <!-- Latest compiled and minified CSS -->
