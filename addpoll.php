@@ -29,6 +29,7 @@ function optFun(){
         echo $i;
     }
 }
+echo count('$_POST[options]');
 $sql = "INSERT INTO db_votes (name,options)
 VALUES ('$_POST[name]', '$_POST[options]')";
 
