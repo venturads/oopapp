@@ -22,25 +22,20 @@ $db = substr($url["path"], 1);
 
 $conn = new mysqli($server, $username, $password,$db);
 // Check connection
-if ($conn->connect_error) {
-     die("Connection failed: " . $conn->connect_error);
-} 
-
-$pollname = $_POST['name'];
-$pollopt = $_POST['options'];
-echo $pollopt;
-echo $pollname;
-$sql = "INSERT INTO db_votes (name,options) VALUES ('name','test')";
-
-mysql_query($sql) or die('Error, query failed : ' . mysql_error());
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
-$conn->close();
+$sql = "INSERT INTO db_votes (name,options)
+VALUES ('John', 'Doe')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
 
 ?>
         <p></p>
