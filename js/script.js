@@ -1,6 +1,9 @@
 $(document).ready(function(){
     $("#label1").click(function(){
-        $("p").append(" <input name='options' placeholder='option'></input><br><br>");
+        for(var i=0;i>4;i++){
+            console.log(i);
+        $("p").append(" <input name='options"+i+"' placeholder='option'></input><br><br>");
+        }
     });
 
 });
