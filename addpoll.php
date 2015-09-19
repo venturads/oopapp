@@ -24,7 +24,11 @@ $conn = new mysqli($server, $username, $password,$db);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
+function optFun(){
+    for($i=0;$i>count(options);$i++){
+        echo $i;
+    }
+}
 $sql = "INSERT INTO db_votes (name,options)
 VALUES ('$_POST[name]', '$_POST[options]')";
 
