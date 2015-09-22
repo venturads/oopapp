@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
             new Chart(income).Bar(barData);
             
             var data = {
-                labels: [$row["name"]],
+                labels: $row["name"],
                 datasets: [
                     {
                         fillColor: "rgba(220,220,220,0.5)",

@@ -32,7 +32,9 @@ if ($result->num_rows > 0) {
      while($row = $result->fetch_assoc()) {
          echo "<div id='delvote' class='text-center'>
             <form action='deletepoll.php' method='post'>
-                <label>" . $row["name"] . "</label><input type='submit' name='btndel' value='" . $row["id"] . "' class='btn btn-info'>
+                <a href='pollchart.php?id=" . $row["id"] . "'><label>" . $row["name"] . "</label></a>
+                <input type='hidden' name='btndel' value=''" . $row["id"] . "'>
+                <input type='submit' value='Delete' class='btn btn-info'>
             </form></div>";
      }
 } else {
