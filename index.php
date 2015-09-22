@@ -7,11 +7,9 @@
 </head>
 
 <body class="text-center">
-    <div id="topmenu">
-        <a href="mypolls.php" id="mypolls" class="btn btn-info">My Polls</a><br><br>
-        <a href="newpoll.php" id="newpoll" class="btn btn-success">New Poll</a><br><br>
-        <a href="login.php" id="login" class="btn btn-info">Login</a><br><br>
-    </div>
+    <?php
+        include 'topmenu.php';
+    ?>
     <div id="votebox" class="text-center">
         <form action="addpoll.php" method="post">
             <input type="text" placeholder='Which is better?' name="name"></input><br><br>
@@ -31,9 +29,6 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<?php
-include 'constants.php';
-include 'pollchart.php';
-?>
+
 </body>
 </html>

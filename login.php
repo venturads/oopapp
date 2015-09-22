@@ -8,10 +8,9 @@
 </head>
 
 <body class="text-center">
-    <div id="topmenu">
-        <button id="mypolls" class="btn btn-info">My Polls</button>
-        <button id="newpoll" class="btn btn-success">New Poll</button><br><br>
-    </div>
+<?php
+    include 'topmenu.php';
+?>
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";

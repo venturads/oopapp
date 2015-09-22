@@ -7,8 +7,18 @@
 </head>
 
 <body class="text-center">
-
-
+<?php
+    include 'topmenu.php';
+?>
+<div id="votebox" class="text-center">
+        <form action="addpoll.php" method="post">
+            <input type="text" placeholder='Which is better?' name="name"></input><br><br>
+            <input type="text" placeholder='option' name="options"></input><br><br>
+            <label type="text" id="label1" class="btn btn-primary">Add Options</label>
+            <p></p>
+            <input type="submit" id="btn1" class="btn btn-info">
+        </form>
+    </div>
 <script src="js/script.js"></script>
 <script src="js/pollchart.js"></script>
 <!-- Latest compiled and minified CSS -->
@@ -18,8 +28,5 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<?php
-include 'constants.php';
-?>
 </body>
 </html>

@@ -7,7 +7,9 @@
 </head>
 
 <body class="text-center">
-
+<?php
+        include 'topmenu.php';
+?>
 <?php
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
@@ -37,7 +39,9 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?> 
-
+<?php
+include 'pollchart.php';
+?>
 <script src="js/script.js"></script>
 <script src="js/pollchart.js"></script>
 <!-- Latest compiled and minified CSS -->
