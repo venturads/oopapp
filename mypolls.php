@@ -30,8 +30,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
      // output data of each row
      while($row = $result->fetch_assoc()) {
-         echo "<br>Name: ". $row["name"] . 
-         "<a href='mypolls.php' class='label label-success' id=" . $row["name"] . "> " . $row["name"] . "</a><br>";
+         echo "<a href='mypolls.php' class='btn btn-success' id=" . $row["name"] . "> " . $row["name"] . "</a><br>";
      }
 } else {
      echo "0 results";
