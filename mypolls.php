@@ -32,8 +32,8 @@ if ($result->num_rows > 0) {
      while($row = $result->fetch_assoc()) {
          echo "<div id='delvote' class='text-center'>
             <form action='deletepoll.php' method='post'>
-                <label>" . $row["name"] . "</label><label type='text' id='delete' class='btn btn-primary' value='" . $row["id"] . "'>Delete</label>
-                <p></p><input type='submit' id='btndel' class='btn btn-info'></form></div>";
+                <label>" . $row["name"] . "</label><input type='submit' name='btndel' class='btn btn-info'>
+            </form></div>";
      }
 } else {
      echo "0 results";

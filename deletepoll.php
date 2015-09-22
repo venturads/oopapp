@@ -28,7 +28,7 @@ $sql = "SELECT id, name FROM db_votes";
 $result = $conn->query($sql);
 
 // sql to delete a record
-$delsql = "DELETE FROM dbvotes WHERE id=" . $_POST[id];
+$delsql = "DELETE FROM dbvotes WHERE id=" . $_POST["btndel"];
 
 if ($conn->query($delsql) === TRUE) {
     echo "Record deleted successfully";
