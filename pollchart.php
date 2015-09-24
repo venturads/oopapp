@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
      // output data of each row
      while($row = $result->fetch_assoc()) {
          echo "<br> id: ". $row["id"]. " - Name: ". $row["name"]. " " . $row["options"] . "<br>";
-           
+?>
             // draw bar chart
             new Chart(income).Bar(barData);
             
@@ -37,7 +37,8 @@ if ($result->num_rows > 0) {
                     }
                 ]
             };
-     }
+<?php
+        }
 } else {
      echo "0 results";
 }
