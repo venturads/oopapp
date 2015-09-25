@@ -24,7 +24,7 @@ if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT id, name FROM db_votes";
+$sql = "SELECT id FROM db_votes";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
