@@ -16,45 +16,44 @@
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $username = $email = $password = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   if (empty($_POST["username"])) {
-     $nameErr = "Username is required";
-   } else {
-     $name = test_input($_POST["username"]);
-   }
-   
-   if (empty($_POST["email"])) {
-     $emailErr = "Email is required";
-   } else {
-     $email = test_input($_POST["email"]);
-   }
-     
-   if (empty($_POST["password"])) {
-     $password = "";
-   } else {
-     $password = test_input($_POST["password"]);
-   }
-
+session_start();
+if(isset($_SESSION['user'])!="")
+{
+ header("Location: home.php");
 }
+include_once 'dbconnect.php';
 
-function test_input($data) {
-   $data = trim($data);
-   $data = stripslashes($data);
-   $data = htmlspecialchars($data);
-   return $data;
+if(isset($_POST['btn-signup']))
+{
+ $username = mysql_real_escape_string($_POST['username']);
+ $email = mysql_real_escape_string($_POST['email']);
+ $password = md5(mysql_real_escape_string($_POST['passw']));
+ 
+ if(mysql_query("INSERT INTO users(username,email,password) VALUES('$username','$email','$password')"))
+ {
+  ?>
+        <script>alert('successfully registered ');</script>
+        <?php
+ }
+ else
+ {
+  ?>
+        <script>alert('error while registering you...');</script>
+        <?php
+ }
 }
 ?>
 
 <h2>Signup!</h2>
 <p><span class="error">* required field.</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-   <input placeholder="JohnDoe123" type="text" name="username">
+<form method="post"> 
+   <input placeholder="JohnDoe123" type="text" name="username" required />
    <span class="error">* <?php echo $nameErr;?></span>
    <br><br>
-   <input placeholder="Password" type="text" name="password">
+   <input placeholder="Password" type="text" name="password" required />
    <span class="error">* <?php echo $emailErr;?></span>
    <br><br>
-   <input placeholder="info@venturads.com" type="text" name="email">
+   <input placeholder="info@venturads.com" type="text" name="email" required />
    <br><br>
    <input class="btn btn-success" type="submit" name="submit" value="Submit"> 
 </form>
