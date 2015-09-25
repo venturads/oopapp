@@ -39,7 +39,7 @@ if ($conn->query($delsql) === TRUE) {
 $conn->close();
 ?> 
 <script src="js/script.js"></script>
-<script src="js/pollchart.js"></script>
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <!-- Optional theme -->
