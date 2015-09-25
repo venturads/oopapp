@@ -27,7 +27,7 @@ if(isset($_POST['btn-signup']))
 {
  $username = mysql_real_escape_string($_POST['username']);
  $email = mysql_real_escape_string($_POST['email']);
- $password = md5(mysql_real_escape_string($_POST['passw']));
+ $password = md5(mysql_real_escape_string($_POST['password']));
  
  if(mysql_query("INSERT INTO users(username,email,password) VALUES('$username','$email','$password')"))
  {
