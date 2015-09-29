@@ -3,7 +3,7 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- import plugin script -->
-   
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
 </head>
 
 <body class="text-center">
@@ -30,6 +30,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
      // output data of each row
      while($row = $result->fetch_assoc()) {
+         echo $row["name"];
          echo "<div id='delvote' class='text-center'>
             <form action='deletepoll.php' method='post'>
                 <a href='pollchart.php?id=" . $row["id"] . "'><label>" . $row["name"] . "</label></a>
