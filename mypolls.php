@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
          echo "<div id='delvote' class='text-center'>
             <form action='deletepoll.php' method='post'>
                 <a href='pollchart.php?id=" . $row["id"] . "'><label>" . $row["name"] . "</label></a>
-                <input type='hidden' name='btndel' value=''" . $row["id"] . "'>
+                <input type='hidden' name='btndel' value='" . $row["id"] . "'>
                 <input type='submit' value='Delete' class='btn btn-info'>
             </form></div>";
      }
