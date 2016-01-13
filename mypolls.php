@@ -30,10 +30,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
      // output data of each row
      while($row = $result->fetch_assoc()) { 
-         echo "<btn btn-success>" . $row["name"] . "</btn>";
          echo "<div id='delvote' class='text-center'>
             <form action='deletepoll.php' method='post'>
-                <a href='pollchart.php?id=" . $row["id"] . "'><label>" . $row["name"] . "</label></a>
+                <a class="label label-success" href='pollchart.php?id=" . $row["id"] . "'><label>" . $row["name"] . "</label></a>
                 <input type='hidden' name='btndel' value='" . $row["id"] . "'>
                 <input type='submit' value='Delete' class='btn btn-info'>
             </form></div>";
