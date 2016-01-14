@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
             <form action='deletepoll.php' method='post'>
                <a href='pollchart.php?id=" . $row["id"] . "'><label>" . $row["name"] . "</label></a>
                 <input type='hidden' name='btndel' value='" . $row["id"] . "'>
-                <input type='submit' value='Delete' class='btn btn-info'>
+                <input type='submit' value='Delete' class='btn btn-danger'>
             </form>";
      }
 } else {
